@@ -1,4 +1,5 @@
 import React from "react";
+// pagintaion
 interface CustomPaginationProps {
   previousLabel?: string;
   nextLabel?: string;
@@ -7,7 +8,7 @@ interface CustomPaginationProps {
   pageCount: number;
   marginPagesDisplayed?: number;
   pageRangeDisplayed?: number;
-  onPageChange: (data: {selected: number}) => void;
+  onPageChange: (data: { selected: number }) => void;
   forcePage?: number;
   containerClassName?: string;
   activeClassName?: string;
@@ -38,7 +39,7 @@ const CustomPagination: React.FC<CustomPaginationProps> = ({
 
   const handlePageChange = (pageIndex: number) => {
     if (pageIndex >= 0 && pageIndex < pageCount && pageIndex !== currentPage) {
-      onPageChange({selected: pageIndex});
+      onPageChange({ selected: pageIndex });
     }
   };
 
